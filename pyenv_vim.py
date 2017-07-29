@@ -50,7 +50,7 @@ def activate(python_exec=None):
     if _original_sys_path == NONE:
         _original_sys_path = sys.path[:]
     # update sys.path with the origianl sys.path and external sys.path
-    sys.path[:] = _original_sys_path
+    sys.path = []
     for path in reversed(external_sys_path):
         # if the path is already specified in original sys.path
         # remove and insert to re-order the appearance
